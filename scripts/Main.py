@@ -1,7 +1,5 @@
 import pygame
-from scripts import Tela, Player
-
-player = Player.Player()
+from scripts import Tela
 
 relogio = pygame.time.Clock()
 
@@ -9,7 +7,10 @@ antes = 0
 
 tela = Tela.Tela()
 
+
 while tela.rodando:
+
+
     if pygame.display.get_surface() is not None and pygame.get_init():
         tela.render(tela.janela, tela)
         tela.fechar()
@@ -19,3 +20,5 @@ while tela.rodando:
             antes = pygame.time.get_ticks()
 
     relogio.tick(60)
+
+
