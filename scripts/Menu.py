@@ -1,1 +1,1 @@
-print("Eu sou o menu :)")
+print(int(False))

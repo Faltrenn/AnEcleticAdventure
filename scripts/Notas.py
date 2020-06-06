@@ -28,5 +28,3 @@ class Notas:
 
         if ((self.posY >= 660 and self.posY <= 680) and (player.btn1 == 0) and (self.pos[0] == 577)):
             objTela.notas.remove(self)
-
-

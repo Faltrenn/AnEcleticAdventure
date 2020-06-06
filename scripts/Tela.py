@@ -28,6 +28,7 @@ class Tela:
             nota.tick(objTela, self.player)
 
         self.player.render(janela)
+        self.player.tick()
 
         pygame.display.update()
 
@@ -43,25 +44,60 @@ class Tela:
                 if eventos.key == pygame.K_LCTRL:
                     self.ctrl = True
                 # INTERAÇÕES DO USUÁRIO
-                if eventos.key == pygame.K_a:
-                    self.player.btn1 = 0
-                if eventos.key == pygame.K_s:
-                    self.player.btn2 = 0
-                if eventos.key == pygame.K_j:
-                    self.player.btn3 = 0
-                if eventos.key == pygame.K_k:
-                    self.player.btn4 = 0
+
+                if eventos.key == pygame.K_CAPSLOCK:
+                    if self.player.modo == "palhetar":
+                        self.player.modo = "normal"
+                    else:
+                        self.player.modo = "palhetar"
+
+                if self.player.modo == "normal":
+                    if eventos.key == pygame.K_a:
+                        self.player.btn1 = 0
+                    if eventos.key == pygame.K_s:
+                        self.player.btn2 = 0
+                    if eventos.key == pygame.K_j:
+                        self.player.btn3 = 0
+                    if eventos.key == pygame.K_k:
+                        self.player.btn4 = 0
+                elif self.player.modo == "palhetar":
+                    if eventos.key == pygame.K_F1:
+                        self.player.f1 = True
+                    if eventos.key == pygame.K_F2:
+                        self.player.f2 = True
+                    if eventos.key == pygame.K_F3:
+                        self.player.f3 = True
+                    if eventos.key == pygame.K_F4:
+                        self.player.f4 = True
+                    if eventos.key == pygame.K_UP:
+                        self.player.cima = True
+                    if eventos.key == pygame.K_DOWN:
+                        self.player.baixo = True
             elif eventos.type == pygame.KEYUP:
                 if eventos.key == pygame.K_w:
                     self.kw = False
                 if eventos.key == pygame.K_LCTRL:
                     self.ctrl = False
                 # INTERAÇÕES DO USUÁRIO
-                if eventos.key == pygame.K_a:
-                    self.player.btn1 = 1
-                if eventos.key == pygame.K_s:
-                    self.player.btn2 = 1
-                if eventos.key == pygame.K_j:
-                    self.player.btn3 = 1
-                if eventos.key == pygame.K_k:
-                    self.player.btn4 = 1
+                if self.player.modo == "normal":
+                    if eventos.key == pygame.K_a:
+                        self.player.btn1 = 1
+                    if eventos.key == pygame.K_s:
+                        self.player.btn2 = 1
+                    if eventos.key == pygame.K_j:
+                        self.player.btn3 = 1
+                    if eventos.key == pygame.K_k:
+                        self.player.btn4 = 1
+                elif self.player.modo == "palhetar":
+                    if eventos.key == pygame.K_F1:
+                        self.player.f1 = False
+                    if eventos.key == pygame.K_F2:
+                        self.player.f2 = False
+                    if eventos.key == pygame.K_F3:
+                        self.player.f3 = False
+                    if eventos.key == pygame.K_F4:
+                        self.player.f4 = False
+                    if eventos.key == pygame.K_UP:
+                        self.player.cima = False
+                    if eventos.key == pygame.K_DOWN:
+                        self.player.baixo = False
