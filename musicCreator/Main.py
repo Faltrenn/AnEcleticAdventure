@@ -13,7 +13,7 @@ Antes = 0
 
 txt = open('txt.txt', 'w')
 
-pygame.mixer.music.load('musica.ogg')
+pygame.mixer.music.load('../scripts/musica.ogg')
 pygame.mixer.music.play()
 pygame.mixer.music.set_volume(1.0)
 

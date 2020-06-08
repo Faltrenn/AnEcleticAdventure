@@ -17,7 +17,7 @@ class Player:
         self.baixo = False
 
     def render(self, janela):
-        pygame.draw.circle(janela, (0,255,0), (577,670), 20, self.btn1)
+        pygame.draw.circle(janela, (0, 255, 0), (577, 670), 20, self.btn1)
         pygame.draw.circle(janela, (255, 0, 0), (619, 670), 20, self.btn2)
         pygame.draw.circle(janela, (255, 125, 0), (661, 670), 20, self.btn3)
         pygame.draw.circle(janela, (0, 0, 255), (703, 670), 20, self.btn4)
@@ -35,7 +35,6 @@ class Player:
 
         if not self.baixo and not self.cima and self.modo == "palhetar" and not (self.cima or self.baixo or (self.f1 or self.f2 or self.f3 or self.f4)):
             self.btn1 = self.btn2 = self.btn3 = self.btn4 = 1
-
 
         if self.cima or self.baixo:
             self.btn1 = int(not self.f1)
