@@ -1,5 +1,5 @@
 import pygame
-
+from scripts import Tela
 
 class Notas:
     def __init__(self):
@@ -17,14 +17,16 @@ class Notas:
         self.posY += 2
         self.pos[1] = self.posY
 
-        if ((self.posY >= 660 and self.posY <= 680) and (player.btn4 == 0) and (self.pos[0] == 703)):
-            objTela.notas.remove(self)
+        if (True):
+            if ((self.posY >= 660 and self.posY <= 680) and (player.btn4 == 0) and (self.pos[0] == 703)):
+                objTela.notas.remove(self)
 
-        if ((self.posY >= 660 and self.posY <= 680) and (player.btn3 == 0) and (self.pos[0] == 661)):
-            objTela.notas.remove(self)
+            if ((self.posY >= 660 and self.posY <= 680) and (player.btn3 == 0) and (self.pos[0] == 661)):
+                objTela.notas.remove(self)
 
-        if ((self.posY >= 660 and self.posY <= 680) and (player.btn2 == 0) and (self.pos[0] == 619)):
-            objTela.notas.remove(self)
+            if ((self.posY >= 660 and self.posY <= 680) and (player.btn2 == 0) and (self.pos[0] == 619)):
+                objTela.notas.remove(self)
 
-        if ((self.posY >= 660 and self.posY <= 680) and (player.btn1 == 0) and (self.pos[0] == 577)):
-            objTela.notas.remove(self)
+            if ((self.posY >= 660 and self.posY <= 680) and (player.btn1 == 0) and (self.pos[0] == 577)):
+                objTela.notas.remove(self)
+

@@ -16,7 +16,7 @@ class Tela:
         self.antes = 0
         self.player = Player.Player()
 
-    def render(self, janela, objTela):
+    def render(self):
         self.fps = self.fps + 1
         if pygame.time.get_ticks() - self.antes >= 1000:
             self.antes = pygame.time.get_ticks()
@@ -24,10 +24,10 @@ class Tela:
             self.fps = 0
         self.janela.fill((255, 255, 255))
         for nota in self.notas:
-            nota.render(janela)
-            nota.tick(objTela, self.player)
+            nota.render(self.janela)
+            nota.tick(self, self.player)
 
-        self.player.render(janela)
+        self.player.render(self.janela)
         self.player.tick()
 
         pygame.display.update()
