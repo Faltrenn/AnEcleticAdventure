@@ -26,16 +26,16 @@ class Tela:
             if eventos.type == pygame.KEYDOWN:
                 if eventos.key == pygame.K_a:
                     self.btn1 = 1
-                    self.notas.append(Notas.Notas(20, self.janela))
+                    self.notas.append(Notas.Notas(20, self.janela, (0, 255, 0)))
                 if eventos.key == pygame.K_s:
                     self.btn2 = 2
-                    self.notas.append(Notas.Notas(60, self.janela))
+                    self.notas.append(Notas.Notas(60, self.janela, (255, 0, 0)))
                 if eventos.key == pygame.K_j:
                     self.btn3 = 3
-                    self.notas.append(Notas.Notas(100, self.janela))
+                    self.notas.append(Notas.Notas(100, self.janela, (255, 125, 0)))
                 if eventos.key == pygame.K_k:
                     self.btn4 = 4
-                    self.notas.append(Notas.Notas(140, self.janela))
+                    self.notas.append(Notas.Notas(140, self.janela, (0, 0, 255)))
 
             if eventos.type == pygame.KEYUP:
                 if eventos.key == pygame.K_a:

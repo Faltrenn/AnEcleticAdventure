@@ -13,9 +13,9 @@ Antes = 0
 
 txt = open('txt.txt', 'w')
 
-pygame.mixer.music.load('musica1.ogg')
+pygame.mixer.music.load('musica.ogg')
 pygame.mixer.music.play()
-pygame.mixer.music.set_volume(0.0)
+pygame.mixer.music.set_volume(1.0)
 
 while pygame.mixer.music.get_busy():  # MAIN LOOP
 
