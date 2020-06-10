@@ -15,14 +15,29 @@ class Player:
         self.f4 = False
         self.cima = False
         self.baixo = False
+        self.pontuacao = 7
 
     def render(self, janela):
         pygame.draw.circle(janela, (0, 255, 0), (577, 670), 20, self.btn1)
         pygame.draw.circle(janela, (255, 0, 0), (619, 670), 20, self.btn2)
-        pygame.draw.circle(janela, (255, 125, 0), (661, 670), 20, self.btn3)
+        pygame.draw.circle(janela, (255, 255, 0), (661, 670), 20, self.btn3)
         pygame.draw.circle(janela, (0, 0, 255), (703, 670), 20, self.btn4)
 
+        if(self.pontuacao <= 5):
+            pygame.draw.rect(janela, (255, 0 , 0), (1200, 640, 50, 50))
+        elif(self.pontuacao >= 6 and self.pontuacao <= 10):
+            pygame.draw.rect(janela, (255, 255 , 0), (1200, 640, 50, 50))
+        else:
+            pygame.draw.rect(janela, (0, 255, 0), (1200, 640, 50, 50))
+
+        if(self.pontuacao < 0):
+            self.pontuacao = 0
+        elif(self.pontuacao > 15):
+            self.pontuacao = 15
+
     def tick(self):
+        print(self.pontuacao)
+
         if not (self.cima or self.baixo):
             if self.f1:
                 self.btn1 = 8

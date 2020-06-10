@@ -28,7 +28,7 @@ class Tela:
             for c in range(0, len(linha)):
                 if c < 9:
                     if linha[c].isdigit() and linha[c] != "0":
-                        self.notas.append(Notas.Nota(int(linha[c]), float(linha[9:]) - 2.7))
+                        self.notas.append(Notas.Nota(int(linha[c]), float(linha[9:]) - 4))
         self.arquivo.close()
 
     def spawn(self):
@@ -47,23 +47,27 @@ class Tela:
 
         for nota in self.esteira:
             nota.render(self.janela)
-            nota.tick()
+            nota.tick(self.esteira, self.player)
 
 
     def render(self):
         self.fps = self.fps + 1
         if pygame.time.get_ticks() - self.antes >= 1000:
             self.antes = pygame.time.get_ticks()
-            print(self.fps)
+
             self.fps = 0
         self.janela.fill((255, 255, 255))
+
+        self.player.render(self.janela)
+        self.player.tick()
 
         self.spawn()
 
         self.musica()
 
-        self.player.render(self.janela)
-        self.player.tick()
+
+
+        self.player.btn1 = self.player.btn2 = self.player.btn3 = self.player.btn4 = 1
 
         pygame.display.update()
 
