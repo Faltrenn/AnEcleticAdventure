@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="940a3314-d789-423e-99b9-271d6772b96d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/Player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cliente.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/serverP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/servidor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/cliente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/serverP.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
