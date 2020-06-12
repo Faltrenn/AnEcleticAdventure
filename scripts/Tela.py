@@ -7,9 +7,5 @@ class Tela:
         self.largura = 1280
         self.altura = 720
         self.janela = pygame.display.set_mode((self.largura, self.altura), pygame.FULLSCREEN)
-        pygame.display.set_caption("He")
+        pygame.display.set_caption("An Ecletic Adventure")
         self.rodando = True
-
-    def render(self, imagens):
-        pass
-

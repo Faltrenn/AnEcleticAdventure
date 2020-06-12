@@ -1,4 +1,4 @@
-from scripts import Menu, Tela, Imagens, Menu_Escolha
+from scripts import Menu, Tela, Imagens, Menu_Escolha, Fontes
 import pygame
 
 pygame.init()
@@ -6,10 +6,10 @@ pygame.init()
 r = pygame.time.Clock()
 
 tela = Tela.Tela()
-menu_escolha = Menu_Escolha.Menu_Escolha(tela)
-menu = Menu.Menu(tela)
+fontes = Fontes.Fontes()
+menu_escolha = Menu_Escolha.Menu_Escolha(tela, fontes)
+menu = Menu.Menu(tela, fontes)
 imagens = Imagens.Imagens()
-
 
 
 def render():
@@ -26,6 +26,8 @@ def render():
 def tick():
     if menu.no_menu:
         menu.tick(menu_escolha)
+    if menu_escolha.menu_escolha:
+        menu_escolha.tick()
 
 
 while tela.rodando:
