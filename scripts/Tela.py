@@ -11,5 +11,5 @@ class Tela:
         self.rodando = True
 
     def render(self, imagens):
-        self.janela.blit(imagens.menu2_background, imagens.menu2_background.get_rect())
+        pass
 

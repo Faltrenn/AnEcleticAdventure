@@ -3,7 +3,7 @@ import pickle
 from server import Player
 
 ip = "localhost" # ip local
-porta = 50001
+porta = 25565
 
 obj = Player.Player() # Simula o que seria um objeto real do jogo
 

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="940a3314-d789-423e-99b9-271d6772b96d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/servidor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/Menu_Escolha.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Tela.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Tela.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/cliente.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/serverP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/servidor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +51,28 @@
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\fonte" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cliente (2)">
+  <component name="RunManager" selected="Python.Main">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AnEcleticAdventure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Player" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,27 +86,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/Player.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cliente (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AnEcleticAdventure" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cliente.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,27 +115,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="server (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AnEcleticAdventure" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="serverP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,13 +136,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="servidor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AnEcleticAdventure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/servidor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.servidor" />
         <item itemvalue="Python.cliente (2)" />
         <item itemvalue="Python.serverP" />
         <item itemvalue="Python.Player" />
-        <item itemvalue="Python.server (2)" />
-        <item itemvalue="Python.cliente (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -179,22 +184,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1591970499009">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1591998683233">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591970499009" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1591970499009">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1591998683233" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1591998683233">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591970499009" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1591970499009">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1591998683233" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1591998683232">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591970499009" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1591970499009">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1591998683232" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1591998683233">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591970499009" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1591998683233" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1591645448741">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -211,9 +220,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591645448741" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1591902014298">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="194" y="11" key="SettingsEditor" timestamp="1591996515502">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591902014298" />
+    <state x="194" y="11" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1591996515502" />
+    <state x="416" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1591995918377">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="416" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1591995918377" />
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1591998879302">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1591998879302" />
   </component>
 </project>

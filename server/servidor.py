@@ -2,8 +2,8 @@ import socket
 import pickle
 
 
-ip = "localhost"
-porta = 50001
+ip = "25.123.12.174"
+porta = 25565
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Define o tipo de conexão.
                                                             # 1 parametro: define a conexão com um ipv4
