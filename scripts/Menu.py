@@ -24,7 +24,7 @@ class Menu:
         for botao in self.botoes:
             self.tela.janela.blit(botao[0], botao[1])
 
-    def tick(self):
+    def tick(self, menu_escolha):
         if self.w and self.ctrl:
             pygame.quit()
             self.tela.rodando = False
@@ -44,9 +44,9 @@ class Menu:
                 if e.key == pygame.K_DOWN:
                     if self.selecionado > 0:
                         self.selecionado -= 1
-                if e.key == pygame.K_p:
+                if e.key == pygame.K_RETURN:
                     if self.selecionado == 0:
-                        self.jogar()
+                        self.jogar(menu_escolha)
                     if self.selecionado == 1:
                         self.opcoes()
                     if self.selecionado == 2:
@@ -58,8 +58,8 @@ class Menu:
                 if e.key == pygame.K_LCTRL:
                     self.ctrl = False
 
-    def jogar(self):
-        self.tela.no_menu2 = True
+    def jogar(self, menu_escolha):
+        menu_escolha.menu_escolha = True
         self.no_menu = False
 
     def opcoes(self):
