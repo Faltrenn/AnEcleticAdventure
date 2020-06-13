@@ -1,11 +1,12 @@
 import pygame
 
 
-class Menu:
+class Menu_Principal:
     def __init__(self, tela, fontes):
+        self.nome = "menu_principal"
         self.tela = tela
         self.ctrl = self.w = False
-        self.no_menu = True
+        self.aqui = True
         self.selecionado = 0
         self.fontes = fontes
         self.txt_jogar = self.fontes.fonte.render("Jogar", True, (0, 0, 0))
@@ -59,8 +60,8 @@ class Menu:
                         self.ctrl = False
 
     def jogar(self, menu_escolha):
-        menu_escolha.menu_escolha = True
-        self.no_menu = False
+        menu_escolha.aqui = True
+        self.aqui = False
 
     def opcoes(self):
         print("Abre as opcoes")

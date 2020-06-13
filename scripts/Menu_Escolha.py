@@ -3,7 +3,8 @@ import pygame
 
 class Menu_Escolha:
     def __init__(self, tela, fontes):
-        self.menu_escolha = False
+        self.nome = "menu_escolha"
+        self.aqui = False
         self.tela = tela
         self.w = False
         self.ctrl = False

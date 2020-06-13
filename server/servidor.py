@@ -2,7 +2,7 @@ import socket
 import pickle
 
 
-ip = "25.123.12.174"
+ip = "localhost"
 porta = 25565
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Define o tipo de conexão.
