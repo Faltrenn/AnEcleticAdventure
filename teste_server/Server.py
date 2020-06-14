@@ -4,25 +4,57 @@ from threading import Thread
 from time import sleep
 
 
-def nova_conexao(conexao):
-    while True:
-        print(conexao.recv(1024).decode("utf-8"))
-        sleep(2)
+class Server:
+    def __init__(self):
 
+        self.conexoes = {}
 
-conectados = 0
+        self.conectados = 0
 
-ip = "localhost"
-porta = 50000
-servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-servidor.bind((ip, porta))
+        self.ips = []
+        for c in range(0, 255):
+            self.ips.append("192.168.1." + str(c))
+        self.porta = 50000
+        self.ip_atual = 0
+        self.servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        while self.ip_atual <= 255:
+            print("Tentando")
+            try:
+                self.servidor.bind((self.ips[self.ip_atual], self.porta))
+            except:
+                self.ip_atual += 1
+            else:
+                print(self.ips[self.ip_atual])
+                print("Conseguiu")
+                break
+        self.servidor.listen(2)
+        self.conexao = self.id = None
+        thread = Thread(target=self.tente_conectar(), args=())
+        thread.start()
 
-servidor.listen(2)
+    def tente_conectar(self):
+        while self.conectados < 2:
+            print("tentando conectar")
+            self.conexao, self.id = self.servidor.accept()
+            print(f"Conectado ao {self.id}")
+            self.conectados += 1
+            thread = Thread(target=self.nova_conexao, args=(self.conexao, "dale",))
+            thread.start()
 
-while conectados < 2:
-    print("tentando conectar")
-    conexao, id = servidor.accept()
-    print(f"Conectado ao {id}")
-    conectados += 1
-    thread = Thread(target=nova_conexao, args=(conexao,))
-    thread.start()
+    @staticmethod
+    def nova_conexao(conexao, nome="Sem nome"):
+        print(f"[*] Sala: {nome}")
+        while True:
+            data = conexao.recv(1024)
+            if data != b"":
+                try:
+                    msg = pickle.loads(data)
+                except:
+                    msg = data.decode()
+                print(msg)
+                conexao.send(b"Recebido")
+                if msg == "ver":
+                    conexao.send(bytes(nome, "utf-8"))
+                    conexao.close()
+                    break
+                sleep(2)
