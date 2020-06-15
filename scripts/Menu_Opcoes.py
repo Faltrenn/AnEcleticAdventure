@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 from scripts import Botoes
+=======
+>>>>>>> 1da35909a219ff678c56317eaa3bfdfb0554cc9a
 import pygame
 
 
