@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9098fa-3286-47d5-b974-26744b3b13be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/teste_server/Main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teste_server/Main2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teste_server/Player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_teste_busca/Connect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_teste_busca/Conta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_teste_busca/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_teste_busca/Server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste_server/Connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste_server/Server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,28 @@
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\teste_server" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Connect">
+  <component name="RunManager" selected="Python.Conta">
+    <configuration name="Connect (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AnEcleticAdventure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_teste_busca" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_teste_busca/Connect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,7 +87,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Conta" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,11 +95,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/teste_server" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_teste_busca" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste_server/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_teste_busca/Conta.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,11 +116,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/teste_server" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_teste_busca" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste_server/Main2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_teste_busca/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -109,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Player" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Server (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,32 +137,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/teste_server" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_teste_busca" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste_server/Player.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AnEcleticAdventure" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/teste_server" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste_server/Server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_teste_busca/Server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Conta" />
+        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.Connect (1)" />
+        <item itemvalue="Python.Server (1)" />
         <item itemvalue="Python.Connect" />
-        <item itemvalue="Python.Main (2)" />
-        <item itemvalue="Python.Server" />
-        <item itemvalue="Python.Main2" />
-        <item itemvalue="Python.Player" />
       </list>
     </recent_temporary>
   </component>
@@ -182,22 +181,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="52" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592074142985" />
-    <state width="1345" height="273" key="GridCell.Tab.0.bottom" timestamp="1592094555402">
+    <state width="1345" height="272" key="GridCell.Tab.0.bottom" timestamp="1592165317659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592094555402" />
-    <state width="1345" height="273" key="GridCell.Tab.0.center" timestamp="1592094555402">
+    <state width="1345" height="272" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592165317659" />
+    <state width="1345" height="272" key="GridCell.Tab.0.center" timestamp="1592165317659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="273" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592094555402" />
-    <state width="1345" height="273" key="GridCell.Tab.0.left" timestamp="1592094555402">
+    <state width="1345" height="272" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592165317659" />
+    <state width="1345" height="272" key="GridCell.Tab.0.left" timestamp="1592165317659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="273" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592094555402" />
-    <state width="1345" height="273" key="GridCell.Tab.0.right" timestamp="1592094555402">
+    <state width="1345" height="272" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592165317659" />
+    <state width="1345" height="272" key="GridCell.Tab.0.right" timestamp="1592165317659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="273" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592094555402" />
+    <state width="1345" height="272" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592165317659" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1592087326050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
