@@ -34,10 +34,10 @@ class Menu_Principal:
                         self.ctrl = True
                     if e.key == pygame.K_w:
                         self.w = True
-                    if e.key == pygame.K_UP:
+                    if e.key == pygame.K_DOWN:
                         if self.selecionado < 2:
                             self.selecionado += 1
-                    if e.key == pygame.K_DOWN:
+                    if e.key == pygame.K_UP:
                         if self.selecionado > 0:
                             self.selecionado -= 1
                     if e.key == pygame.K_RETURN:

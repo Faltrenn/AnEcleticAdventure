@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Botoes:
     def __init__(self, fontes, textos, cores, posicoes):
         self.fontes = fontes
@@ -14,10 +14,3 @@ class Botoes:
         self.botoes[selecionado][0] = self.fontes.fonte_selecionado.render(self.textos[selecionado], True, self.cores[selecionado])
         for botao in self.botoes:
             tela.janela.blit(botao[0], botao[1])
-=======
-from scripts import Fontes
-
-class Botoes:
-    def __init__(self, fontes):
-        self.fontes = fontes
->>>>>>> 1da35909a219ff678c56317eaa3bfdfb0554cc9a

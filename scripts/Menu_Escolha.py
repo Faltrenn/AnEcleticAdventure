@@ -1,3 +1,4 @@
+from scripts import Botoes
 import pygame
 
 
@@ -9,27 +10,16 @@ class Menu_Escolha:
         self.w = False
         self.ctrl = False
         self.selecionado = 0
-        self.fontes = fontes
-        self.btn_historia = self.fontes.fonte.render("Modo Historia", True, (0, 0, 0))
-        self.btn_online = self.fontes.fonte.render("Online", True, (0, 0, 0))
-        self.btn_outros = self.fontes.fonte.render("Outros", True, (0, 0, 0))
-        self.btn_voltar = self.fontes.fonte.render("Voltar", True, (255, 255, 255))
-        self.txt = ["Modo História", "Online", "Outros", "Voltar"]
-        self.botoes = []
-        self.cores = [(0, 0, 0), (0, 0, 0), (0, 0, 0), (255, 255, 255) ]
+        self.bt_cores = [(0, 0, 0), (0, 0, 0), (0, 0, 0), (255, 255, 255)]
+        self.bt_textos = ["Modo História", "Online", "Outros", "Voltar"]
+        self.bt_pos = [(150, 80), (150, 180), (150, 280), (150, 620)]
+        self.botoes = Botoes.Botoes(fontes, self.bt_textos, self.bt_cores, self.bt_pos)
 
     def render(self, imagens):
         self.tela.janela.blit(imagens.menu2_background, imagens.menu2_background.get_rect())
 
-        self.botoes = [[self.btn_historia, (150, 80)],
-                       [self.btn_online, (150, 180)],
-                       [self.btn_outros, (150, 280)],
-                       [self.btn_voltar, (150, 620)]]
+        self.botoes.render(self.selecionado, self.tela)
 
-        self.botoes[self.selecionado][0] = self.fontes.fonte_selecionado.render(self.txt[self.selecionado], True, self.cores[self.selecionado])
-
-        for botao in self.botoes:
-            self.tela.janela.blit(botao[0], botao[1])
 
     def tick(self, mudar_menu):
         if self.w and self.ctrl:

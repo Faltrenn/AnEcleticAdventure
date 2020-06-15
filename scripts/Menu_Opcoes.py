@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 from scripts import Botoes
-=======
->>>>>>> 1da35909a219ff678c56317eaa3bfdfb0554cc9a
 import pygame
 
 
@@ -13,27 +10,15 @@ class Menu_Opcoes:
         self.w = False
         self.ctrl = False
         self.selecionado = 0
-        self.fontes = fontes
-        self.btn_controleNormal = self.fontes.fonte.render("Thiago", True, (0, 0, 0))
-        self.btn_controlePalhetar = self.fontes.fonte.render("Lil Luvi", True, (0, 0, 0))
-        self.btn_p3 = self.fontes.fonte.render("Dj Bampa", True, (0, 0, 0))
-        self.btn_voltar = self.fontes.fonte.render("Voltar", True, (255, 255, 255))
-        self.textos = ["Thiago", "Lil Luvi", "Dj Bampa", "Voltar"]
-        self.botoes = []
-        self.cores = [(0, 0, 0), (0, 0, 0,), (0, 0, 0), (255, 255, 255)]
+        self.bt_cores = [(0, 0, 0), (0, 0, 0,), (0, 0, 0), (255, 255, 255)]
+        self.bt_textos = ["Thiago", "Lil Luvi", "Dj Bampa", "Voltar"]
+        self.bt_pos = [(150, 80), (150, 180), (150, 280), (150, 620)]
+        self.botoes = Botoes.Botoes(fontes, self.bt_textos, self.bt_cores, self.bt_pos)
 
     def render(self, imagens):
         self.tela.janela.blit(imagens.menu2_background, imagens.menu2_background.get_rect())
 
-        self.botoes = [[self.btn_p1, (150, 80)],
-                       [self.btn_p2, (150, 180)],
-                       [self.btn_p3, (150, 280)],
-                       [self.btn_voltar, (150, 620)]]
-
-        self.botoes[self.selecionado][0] = self.fontes.fonte_selecionado.render(self.textos[self.selecionado], True, self.cores[self.selecionado])
-
-        for botao in self.botoes:
-            self.tela.janela.blit(botao[0], botao[1])
+        self.botoes.render(self.selecionado, self.tela)
 
     def tick(self, mudar_menu):
         if self.w and self.ctrl:
