@@ -30,7 +30,7 @@ def render():
 
 def tick():
     if menu_principal.aqui:
-        menu_principal.tick(menu_escolha)
+        menu_principal.tick(mudar_menu)
     if menu_escolha.aqui:
         menu_escolha.tick()
 

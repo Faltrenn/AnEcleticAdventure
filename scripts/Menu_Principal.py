@@ -24,7 +24,7 @@ class Menu_Principal:
         for botao in self.botoes:
             self.tela.janela.blit(botao[0], botao[1])
 
-    def tick(self, menu_escolha):
+    def tick(self, mudar_menu):
         if self.w and self.ctrl:
             pygame.quit()
             self.tela.rodando = False
@@ -47,7 +47,7 @@ class Menu_Principal:
                             self.selecionado -= 1
                     if e.key == pygame.K_RETURN:
                         if self.selecionado == 0:
-                            self.jogar(menu_escolha)
+                            self.jogar(mudar_menu)
                         if self.selecionado == 1:
                             self.opcoes()
                         if self.selecionado == 2:
@@ -59,9 +59,8 @@ class Menu_Principal:
                     if e.key == pygame.K_LCTRL:
                         self.ctrl = False
 
-    def jogar(self, menu_escolha):
-        menu_escolha.aqui = True
-        self.aqui = False
+    def jogar(self, mudar_menu):
+        mudar_menu.mudar_tela(self.nome, "menu_escolha")
 
     def opcoes(self):
         print("Abre as opcoes")
