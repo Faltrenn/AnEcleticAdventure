@@ -1,32 +1,33 @@
+from scripts import Botoes
 import pygame
 
 
-class Menu_Escolha:
+class Menu_Historia:
     def __init__(self, tela, fontes):
-        self.nome = "menu_escolha"
+        self.nome = "menu_historia"
         self.aqui = False
         self.tela = tela
         self.w = False
         self.ctrl = False
         self.selecionado = 0
         self.fontes = fontes
-        self.btn_historia = self.fontes.fonte.render("Modo Historia", True, (0, 0, 0))
-        self.btn_online = self.fontes.fonte.render("Online", True, (0, 0, 0))
-        self.btn_outros = self.fontes.fonte.render("Outros", True, (0, 0, 0))
+        self.btn_p1 = self.fontes.fonte.render("Thiago", True, (0, 0, 0))
+        self.btn_p2 = self.fontes.fonte.render("Lil Luvi", True, (0, 0, 0))
+        self.btn_p3 = self.fontes.fonte.render("Dj Bampa", True, (0, 0, 0))
         self.btn_voltar = self.fontes.fonte.render("Voltar", True, (255, 255, 255))
-        self.txt = ["Modo História", "Online", "Outros", "Voltar"]
+        self.textos = ["Thiago", "Lil Luvi", "Dj Bampa", "Voltar"]
         self.botoes = []
-        self.cores = [(0, 0, 0), (0, 0, 0), (0, 0, 0), (255, 255, 255) ]
+        self.cores = [(0, 0, 0), (0, 0, 0,), (0, 0, 0), (255, 255, 255)]
 
     def render(self, imagens):
         self.tela.janela.blit(imagens.menu2_background, imagens.menu2_background.get_rect())
 
-        self.botoes = [[self.btn_historia, (150, 80)],
-                       [self.btn_online, (150, 180)],
-                       [self.btn_outros, (150, 280)],
+        self.botoes = [[self.btn_p1, (150, 80)],
+                       [self.btn_p2, (150, 180)],
+                       [self.btn_p3, (150, 280)],
                        [self.btn_voltar, (150, 620)]]
 
-        self.botoes[self.selecionado][0] = self.fontes.fonte_selecionado.render(self.txt[self.selecionado], True, self.cores[self.selecionado])
+        self.botoes[self.selecionado][0] = self.fontes.fonte_selecionado.render(self.textos[self.selecionado], True, self.cores[self.selecionado])
 
         for botao in self.botoes:
             self.tela.janela.blit(botao[0], botao[1])
@@ -51,14 +52,9 @@ class Menu_Escolha:
                     if e.key == pygame.K_DOWN and self.selecionado < 3:
                         self.selecionado += 1
                     if e.key == pygame.K_RETURN:
-                        if self.selecionado == 0:
-                            self.modo_historia(mudar_menu)
-                            
                         if self.selecionado == 3:
                             self.voltar(mudar_menu)
-
                             self.selecionado = 0
-
                 if e.type == pygame.KEYUP:
                     if e.key == pygame.K_LCTRL:
                         self.ctrl = False
@@ -66,8 +62,5 @@ class Menu_Escolha:
                         self.w = False
 
     def voltar(self, mudar_menu):
-        mudar_menu.mudar_tela(self.nome, "menu_principal")
-
-    def modo_historia(self, mudar_menu):
-        mudar_menu.mudar_tela(self.nome, "menu_historia")
+        mudar_menu.mudar_tela(self.nome, "menu_escolha")
 

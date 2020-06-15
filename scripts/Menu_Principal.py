@@ -1,3 +1,4 @@
+from scripts import Botoes
 import pygame
 
 
@@ -8,21 +9,15 @@ class Menu_Principal:
         self.ctrl = self.w = False
         self.aqui = True
         self.selecionado = 0
-        self.fontes = fontes
-        self.txt_jogar = self.fontes.fonte.render("Jogar", True, (0, 0, 0))
-        self.txt_opcoes = self.fontes.fonte.render("Opções", True, (0, 0, 0))
-        self.txt_sair = self.fontes.fonte.render("Sair", True, (0, 0, 0))
-        self.textos = ["Jogar", "Opções", "Sair"]
-        self.botoes = []
+        self.bt_textos = ["Jogar", "Opções", "Sair"]
+        self.bt_cores = [(0, 0, 0), (0, 0, 0), (0, 0, 0)]
+        self.bt_pos = [(300, 600), (600, 600), (900, 600)]
+        self.botoes = Botoes.Botoes(fontes, self.bt_textos, self.bt_cores, self.bt_pos)
 
     def render(self, imagens):
         self.tela.janela.blit(imagens.menu_background, imagens.menu_background.get_rect())
 
-        self.botoes = [[self.txt_jogar, (300, 600)], [self.txt_opcoes, (600, 600)], [self.txt_sair, (900, 600)]]
-        self.botoes[self.selecionado][0] = self.fontes.fonte_selecionado.render(self.textos[self.selecionado], True, (0, 0, 0))
-
-        for botao in self.botoes:
-            self.tela.janela.blit(botao[0], botao[1])
+        self.botoes.render(self.selecionado, self.tela)
 
     def tick(self, mudar_menu):
         if self.w and self.ctrl:
