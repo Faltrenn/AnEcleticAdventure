@@ -46,7 +46,6 @@ class Menu_Escolha:
                             
                         if self.selecionado == 3:
                             self.voltar(mudar_menu)
-
                             self.selecionado = 0
 
                 if e.type == pygame.KEYUP:

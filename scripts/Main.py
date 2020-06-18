@@ -1,4 +1,4 @@
-from scripts import Menu_Principal, Tela, Imagens, Menu_Escolha, Fontes, Mudar_Menu, Menu_Historia, Menu_Opcoes
+from scripts import Menu_Principal, Tela, Imagens, Menu_Escolha, Fontes, Mudar_Menu, Menu_Historia, Menu_Opcoes, Menu_Musicas
 import pygame
 
 pygame.init()
@@ -11,11 +11,13 @@ menu_escolha = Menu_Escolha.Menu_Escolha(tela, fontes)
 menu_principal = Menu_Principal.Menu_Principal(tela, fontes)
 menu_historia = Menu_Historia.Menu_Historia(tela, fontes)
 menu_opcoes = Menu_Opcoes.Menu_Opcoes(tela, fontes)
+menu_musicas = Menu_Musicas.Menu_Musicas(tela, fontes)
 
 telas = {"menu_principal": menu_principal,
          "menu_escolha": menu_escolha,
          "menu_historia": menu_historia,
-         "menu_opcoes": menu_opcoes}
+         "menu_opcoes": menu_opcoes,
+         "menu_musicas": menu_musicas}
 
 mudar_menu = Mudar_Menu.Mudar_Menu(telas)
 
@@ -33,6 +35,8 @@ def render():
             menu_historia.render(imagens)
         if menu_opcoes.aqui:
             menu_opcoes.render(imagens)
+        if menu_musicas.aqui:
+            menu_musicas.render(imagens)
 
         pygame.display.update()
 
@@ -44,8 +48,11 @@ def tick():
         menu_escolha.tick(mudar_menu)
     if menu_historia.aqui:
         menu_historia.tick(mudar_menu)
+        menu_musicas.menu = menu_historia.menu
     if menu_opcoes.aqui:
         menu_opcoes.tick(mudar_menu)
+    if menu_musicas.aqui:
+        menu_musicas.tick(mudar_menu)
 
 while tela.rodando:
 
