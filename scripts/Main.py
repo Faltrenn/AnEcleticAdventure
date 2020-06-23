@@ -1,62 +1,35 @@
-from scripts import Menu_Principal, Tela, Imagens, Menu_Escolha, Fontes, Mudar_Menu, Menu_Historia, Menu_Opcoes, Menu_Musicas
+from scripts import Recursos, Telas
 import pygame
+
 
 pygame.init()
 
-r = pygame.time.Clock()
 
-tela = Tela.Tela()
-fontes = Fontes.Fontes()
-menu_escolha = Menu_Escolha.Menu_Escolha(tela, fontes)
-menu_principal = Menu_Principal.Menu_Principal(tela, fontes)
-menu_historia = Menu_Historia.Menu_Historia(tela, fontes)
-menu_opcoes = Menu_Opcoes.Menu_Opcoes(tela, fontes)
-menu_musicas = Menu_Musicas.Menu_Musicas(tela, fontes)
+class Main:
+    def __init__(self):
+        # Recursos
+        self.tela = Recursos.Tela()
+        self.fontes = Recursos.Fontes()
+        self.imagens = Recursos.Imagens()
+        self.relogio = pygame.time.Clock()
 
-telas = {"menu_principal": menu_principal,
-         "menu_escolha": menu_escolha,
-         "menu_historia": menu_historia,
-         "menu_opcoes": menu_opcoes,
-         "menu_musicas": menu_musicas}
+        # Menus
+        self.telas = {"principal": Telas.MenuPrincipal(self.imagens),
+                      "modos": Telas.MenuModos(self.imagens)}
+        self.mudar_tela = Telas.MudarTela(self.telas)
 
-mudar_menu = Mudar_Menu.Mudar_Menu(telas)
+    def loop(self):
+        while self.tela.rodando:
+            self.tela.janela.fill((0, 0, 0))
+            for nome, menu in self.telas.items():
+                if menu.aqui:
+                    self.tela.tick(menu.comandos, self.mudar_tela, self)
+                    if pygame.display.get_surface() is not None:
+                        menu.rodar(self.tela)
+                        pygame.display.update()
 
-imagens = Imagens.Imagens()
-
-
-def render():
-    if pygame.display.get_surface() is not None:
-        tela.janela.fill((255, 255, 255))
-        if menu_principal.aqui:
-            menu_principal.render(imagens)
-        if menu_escolha.aqui:
-            menu_escolha.render(imagens)
-        if menu_historia.aqui:
-            menu_historia.render(imagens)
-        if menu_opcoes.aqui:
-            menu_opcoes.render(imagens)
-        if menu_musicas.aqui:
-            menu_musicas.render(imagens)
-
-        pygame.display.update()
+        self.relogio.tick(60)
 
 
-def tick():
-    if menu_principal.aqui:
-        menu_principal.tick(mudar_menu)
-    if menu_escolha.aqui:
-        menu_escolha.tick(mudar_menu)
-    if menu_historia.aqui:
-        menu_historia.tick(mudar_menu)
-        menu_musicas.menu = menu_historia.menu
-    if menu_opcoes.aqui:
-        menu_opcoes.tick(mudar_menu)
-    if menu_musicas.aqui:
-        menu_musicas.tick(mudar_menu)
-
-while tela.rodando:
-
-    tick()
-    render()
-
-    r.tick(60)
+main = Main()
+main.loop()

@@ -1,5 +1,5 @@
 import pygame
-from scripts import Tela
+from v2.scripts import Tela
 
 relogio = pygame.time.Clock()
 
