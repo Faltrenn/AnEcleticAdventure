@@ -2,59 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9098fa-3286-47d5-b974-26744b3b13be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/Telas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imagens/450x610 - Personagens.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/musicas/musica.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/musicas/txt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/fontes/Subspace Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/fontes/Subspace.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/imagens/450x610 - Personagens.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/imagens/menu2_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/imagens/menu_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/imagens/p1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v2/scripts/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imagens/menu_wip.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonte/Aero.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonte/Subspace Bold Italic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonte/Subspace Bold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/fontes/Subspace Bold.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonte/Subspace Italic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonte/Subspace.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/fontes/Subspace.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/450x610 - Personagens.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Recursos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/menu2_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/menu2_background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/menu_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/menu_background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/p1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/p1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Botoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Botoes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Fontes.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Fontes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Imagens.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Imagens.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Menu_Escolha.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Menu_Escolha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Menu_Historia.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Menu_Historia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Menu_Musicas.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Menu_Musicas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Menu_Opcoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Menu_Opcoes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Menu_Principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Menu_Principal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Mudar_Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Mudar_Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Tela.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/scripts/Tela.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server/Player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server/servidor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_teste_busca/Connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server_teste_busca/Connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_teste_busca/Conta.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server_teste_busca/Conta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_teste_busca/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server_teste_busca/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_teste_busca/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server_teste_busca/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste/Mapa1.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste/Mapa1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste/Mapa2.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste/Mapa2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste/MudarMapa.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste/MudarMapa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste_server/Connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste_server/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste_server/Main2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste_server/Player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste_server/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/teste_server/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/.idea/An Ecletic Adventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1/.idea/An Ecletic Adventure.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/v1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/v1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/scripts/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/scripts/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Recursos.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Recursos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Telas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,26 +193,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="52" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592854487057" />
-    <state width="1345" height="233" key="GridCell.Tab.0.bottom" timestamp="1592937645006">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1593101785144">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592937645006" />
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1592515259089" />
-    <state width="1345" height="233" key="GridCell.Tab.0.center" timestamp="1592937645006">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1593101785144">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592937645006" />
-    <state width="1419" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1592515259089" />
-    <state width="1345" height="233" key="GridCell.Tab.0.left" timestamp="1592937645006">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1593101785144">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592937645006" />
-    <state width="1419" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1592515259088" />
-    <state width="1345" height="233" key="GridCell.Tab.0.right" timestamp="1592937645006">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1593101785144">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1345" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592937645006" />
-    <state width="1419" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1592515259089" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1592087326050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -275,15 +229,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592087326050" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1592246853193">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592246853193" />
-    <state x="194" y="11" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1592243379720" />
-    <state x="416" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1592508691620">
+    <state x="194" y="11" key="SettingsEditor" timestamp="1593099731536">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="416" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1592508691620" />
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592246853193" />
+    <state x="194" y="11" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1593099731536" />
+    <state x="416" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1593099696181">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="416" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1593099696181" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

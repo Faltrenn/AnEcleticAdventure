@@ -33,6 +33,7 @@ class Imagens:
     def __init__(self):
         self.back_menu_principal = pygame.image.load("../src/imagens/menu_background.jpg").convert_alpha()
         self.back_menu2 = pygame.image.load("../src/imagens/menu2_background.jpg")
+        self.back_menu_wip = pygame.image.load("../src/imagens/menu_wip.jpg")
 
 
 class Fontes:

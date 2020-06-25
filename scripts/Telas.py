@@ -64,3 +64,78 @@ class MenuModos:
                 elif self.botoes.selec == 3:
                     mudar_tela.trocar_tela(self.nome, "principal")
                     main.telas[self.nome] = MenuModos(self.imagens)
+
+class MenuHistoria:
+    def __init__(self, imagens):
+        self.nome = "historia"
+        self.aqui = False
+        self.imagens = imagens
+        self.infos = [["Personagem 1", (0, 0, 0), (180, 80)],
+                      ["Personagem 2", (0, 0, 0), (180, 180)],
+                      ["Personagem 3", (0, 0, 0), (180, 280)],
+                      ["Voltar", (255, 255, 255), (180, 600)]]
+        self.botoes = Recursos.Botoes(self.infos)
+        self.comandos = [self.comandos] # Não Entendi (?)
+
+    def rodar(self, tela):
+        tela.janela.blit(self.imagens.back_menu2, self.imagens.back_menu2.get_rect())
+        self.botoes.rodar(tela)
+
+    def comandos(self, e, mudar_tela, tela, main):
+        self.botoes.comandos(e)
+        if e.type == pygame.KEYDOWN:
+            if e.key == pygame.K_RETURN:
+                if self.botoes.selec == 0:
+                    mudar_tela.trocar_tela(self.nome, "personagem1")
+                elif self.botoes.selec == 1:
+                    mudar_tela.trocar_tela(self.nome, "personagem2")
+                elif self.botoes.selec == 2:
+                    mudar_tela.trocar_tela(self.nome, "personagem3")
+                elif self.botoes.selec == 3:
+                    mudar_tela.trocar_tela(self.nome, "modos")
+                    main.telas[self.nome] = MenuHistoria(self.imagens)
+
+class MenuOnline:
+    def __init__(self, imagens):
+        self.nome = "online"
+        self.aqui = False
+        self.imagens = imagens
+        self.infos = [["Voltar", (255, 255, 255), (180, 600)]]
+        self.botoes = Recursos.Botoes(self.infos)
+        self.comandos = [self.comandos]
+
+    def rodar(self, tela):
+        tela.janela.blit(self.imagens.back_menu_wip, self.imagens.back_menu_wip.get_rect())
+        self.botoes.rodar(tela)
+
+    def comandos(self, e, mudar_tela, tela, main):
+        self.botoes.comandos(e)
+        if e.type == pygame.KEYDOWN:
+            if e.key == pygame.K_RETURN:
+                if self.botoes.selec == 0:
+                    mudar_tela.trocar_tela(self.nome, "modos")
+                    main.telas[self.nome] = MenuOnline(self.imagens)
+
+class MenuExtras:
+    def __init__(self, imagens):
+        self.nome = "extras"
+        self.aqui = False
+        self.imagens = imagens
+        self.infos = [["Voltar", (255, 255, 255), (180, 600)]]
+        self.botoes = Recursos.Botoes(self.infos)
+        self.comandos = [self.comandos]
+
+    def rodar(self, tela):
+        tela.janela.blit(self.imagens.back_menu_wip, self.imagens.back_menu_wip.get_rect())
+        self.botoes.rodar(tela)
+
+    def comandos(self, e, mudar_tela, tela, main):
+        self.botoes.comandos(e)
+        if e.type == pygame.KEYDOWN:
+            if e.key == pygame.K_RETURN:
+                if self.botoes.selec == 0:
+                    mudar_tela.trocar_tela(self.nome, "modos")
+                    main.telas[self.nome] = MenuOnline(self.imagens)
+
+
+

@@ -14,11 +14,14 @@ class Main:
         self.relogio = pygame.time.Clock()
 
         # Menus
-        self.telas = {"principal": Telas.MenuPrincipal(self.imagens),
-                      "modos": Telas.MenuModos(self.imagens)}
+        self.telas = {"principal": Telas.MenuPrincipal(self.imagens),  # Principal -> História -> P1|P2|P3
+                      "modos": Telas.MenuModos(self.imagens),                    # -> Online
+                      "historia": Telas.MenuHistoria(self.imagens),              # -> Extras
+                      "online": Telas.MenuOnline(self.imagens),
+                      "extras": Telas.MenuExtras(self.imagens)}
         self.mudar_tela = Telas.MudarTela(self.telas)
 
-    def loop(self):
+    def loop(self): #Não Entendi (?)
         while self.tela.rodando:
             self.tela.janela.fill((0, 0, 0))
             for nome, menu in self.telas.items():
