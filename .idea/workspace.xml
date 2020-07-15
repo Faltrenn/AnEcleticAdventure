@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9098fa-3286-47d5-b974-26744b3b13be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/Player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/musicas/Musica1 do P1.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/musicas/Musica1 do P1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Recursos.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Recursos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Telas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/musicas/musica.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/musicas/txt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/scripts/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/scripts/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +39,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v2" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure" />
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\src\musicas" />
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\src\fontes" />
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\src\imagens" />
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\teste_server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v3" />
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v2" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Main (1)">
@@ -198,25 +192,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="52" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593375606115" />
-    <state width="1345" height="233" key="GridCell.Tab.0.bottom" timestamp="1594257193679">
+    <state width="1345" height="210" key="GridCell.Tab.0.bottom" timestamp="1594838888209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594257193679" />
+    <state width="1345" height="210" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
     <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
-    <state width="1345" height="233" key="GridCell.Tab.0.center" timestamp="1594257193679">
+    <state width="1345" height="210" key="GridCell.Tab.0.center" timestamp="1594838888209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594257193679" />
+    <state width="1345" height="210" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
     <state width="1419" height="222" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
-    <state width="1345" height="233" key="GridCell.Tab.0.left" timestamp="1594257193679">
+    <state width="1345" height="210" key="GridCell.Tab.0.left" timestamp="1594838888209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594257193679" />
+    <state width="1345" height="210" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
     <state width="1419" height="222" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
-    <state width="1345" height="233" key="GridCell.Tab.0.right" timestamp="1594257193679">
+    <state width="1345" height="210" key="GridCell.Tab.0.right" timestamp="1594838888209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594257193679" />
+    <state width="1345" height="210" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
     <state width="1419" height="222" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1593101785144" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1592087326050">
       <screen x="0" y="0" width="1366" height="728" />

@@ -8,13 +8,22 @@ class Tela:
 
 
 class Botoes:
-    def __init__(self, infos):
-        self.infos = infos
+    def __init__(self, infos):# [[nome, cor, posicao, acao]]
+        self.textos = list()
+        self.cores = list()
+        self.posicoes = list()
+        self.acoes = list()
+        for info in infos:
+            self.textos.append(info[0])
+            self.cores.append(info[1])
+            self.posicoes.append(info[2])
+            self.acoes.append(info[3])
+
         self.botoes = list()
         self.fontes = Fontes()
         self.selec = 0
-        for info in self.infos:
-            self.botoes.append([self.fontes.fonte_normal.render(info[0], True, info[1]), False])
+        for c in range(0, len(infos)):
+            self.botoes.append([self.fontes.fonte_normal.render(self.textos[c], True, self.cores[c]), False])
 
     def tick(self, tela):
         for e in pygame.event.get():
@@ -27,19 +36,17 @@ class Botoes:
                 if e.key == pygame.K_DOWN and self.selec < len(self.botoes) - 1:
                     self.selec += 1
                 if e.key == pygame.K_RETURN:
-                    self.infos[self.selec][3]()
+                     self.acoes[self.selec]()
 
         for c, botao in enumerate(self.botoes):
-            if not botao[1] and c == self.selec:
-                self.botoes[c] = [self.fontes.fonte_selec.render(self.infos[c][0], True,
-                                                                 self.infos[c][1]), True]
-            if self.botoes[1] and c != self.selec:
-                self.botoes[c] = [self.fontes.fonte_normal.render(self.infos[c][0], True,
-                                                                  self.infos[c][1]), False]
+            if c == self.selec and not botao[1]:
+                self.botoes[self.selec] = [self.fontes.fonte_selec.render(self.textos[self.selec], True, self.cores[self.selec]), True]
+            elif c != self.selec and botao[1]:
+                self.botoes[c] = [self.fontes.fonte_normal.render(self.textos[c], True, self.cores[c]), False]
 
     def render(self, tela):
         for c, botao in enumerate(self.botoes):
-            tela.janela.blit(botao[0], self.infos[c][2])
+            tela.janela.blit(botao[0], self.posicoes[c])
 
 
 class Fontes:
