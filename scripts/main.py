@@ -21,7 +21,12 @@ class Main:
 
         self.delta = 0
 
-        self.telas = {"principal": Telas.MenuPrincipal(self)}
+        self.telas = {"principal": Telas.MenuPrincipal(self),
+                      "jogar": Telas.MenuJogar(self),
+                      "opcoes": Telas.MenuOpcoes(self),
+                      "modo_historia": Telas.MenuModoHistoria(self),
+                      "extras": Telas.MenuExtras(self),
+                      "online": Telas.MenuOnline(self)}
 
     def rodar(self):
         r = Thread(target=self.render)
