@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9098fa-3286-47d5-b974-26744b3b13be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/musicas/Musica1.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/musicas/Musica1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnEcleticAdventure.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Recursos.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Recursos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Telas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagens/menu2_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/background2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagens/menu_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/background1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagens/menu_wip.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/background3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/musicas/Musica1 do P1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/musicas/Musica1 do P1.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +43,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/An_Ecletic_Adventure/v2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\src\imagens" />
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v3\src\imagens" />
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v3\src" />
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v3" />
+      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure" />
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\src\musicas" />
@@ -47,33 +62,8 @@
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\src\imagens" />
       <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\teste_server" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v3" />
-      <recent name="C:\Users\emanu\Documents\GitHub\AnEcleticAdventure\v2" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.Main (1)">
-    <configuration name="Connect (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AnEcleticAdventure" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_teste_busca" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_teste_busca/Connect.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="Conta" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,7 +127,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,11 +135,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server_teste_busca" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/v3/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server_teste_busca/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/v3/scripts/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AnEcleticAdventure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Main (3)" />
         <item itemvalue="Python.Main (1)" />
         <item itemvalue="Python.Main (2)" />
         <item itemvalue="Python.Conta" />
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python.Connect (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -189,29 +200,29 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1592515379798" />
-    <state x="52" y="125" key="FileChooserDialogImpl" timestamp="1593375606115">
+    <state x="52" y="125" key="FileChooserDialogImpl" timestamp="1597085844700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="52" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593375606115" />
-    <state width="1419" height="276" key="GridCell.Tab.0.bottom" timestamp="1594842485203">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="52" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597085844700" />
+    <state width="1345" height="196" key="GridCell.Tab.0.bottom" timestamp="1597089828062">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="210" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
+    <state width="1345" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597089828062" />
     <state width="1419" height="276" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
-    <state width="1419" height="276" key="GridCell.Tab.0.center" timestamp="1594842485203">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1345" height="196" key="GridCell.Tab.0.center" timestamp="1597089828062">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="210" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
+    <state width="1345" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597089828062" />
     <state width="1419" height="276" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
-    <state width="1419" height="276" key="GridCell.Tab.0.left" timestamp="1594842485203">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1345" height="196" key="GridCell.Tab.0.left" timestamp="1597089828062">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="210" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
+    <state width="1345" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597089828062" />
     <state width="1419" height="276" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
-    <state width="1419" height="276" key="GridCell.Tab.0.right" timestamp="1594842485203">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1345" height="196" key="GridCell.Tab.0.right" timestamp="1597089828062">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="210" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594838888209" />
+    <state width="1345" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597089828062" />
     <state width="1419" height="276" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
     <state width="1419" height="276" key="GridCell.Tab.1.bottom" timestamp="1594842485203">
       <screen x="0" y="0" width="1440" height="860" />

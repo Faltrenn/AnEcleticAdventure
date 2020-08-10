@@ -21,12 +21,15 @@ class Main:
 
         self.delta = 0
 
-        self.telas = {"principal": Telas.MenuPrincipal(self),
-                      "jogar": Telas.MenuJogar(self),
-                      "opcoes": Telas.MenuOpcoes(self),
-                      "modo_historia": Telas.MenuModoHistoria(self),
-                      "extras": Telas.MenuExtras(self),
-                      "online": Telas.MenuOnline(self)}
+        self.comandos = [pygame.K_a, pygame.K_s, pygame.K_j, pygame.K_k]
+
+        self.telas = {"principal": Telas.MenuPrincipal(self, "back1"),
+                      "jogar": Telas.MenuJogar(self, "back2"),
+                      "opcoes": Telas.MenuOpcoes(self, "back1"),
+                      "modo_historia": Telas.MenuModoHistoria(self, "back2"),
+                      "extras": Telas.MenuExtras(self, "back2"),
+                      "online": Telas.MenuOnline(self, "back2"),
+                      "jogo": Telas.TelaJogar(self, "back2")}
 
     def rodar(self):
         r = Thread(target=self.render)
@@ -54,7 +57,7 @@ class Main:
                 if delta >= 1 / self.limitador_render:
                     self.antes_render = self.agora_render
                     self.limitador_render = contador.rodar()
-                    # Código limitador = 60 fps = 56
+                    # Código limitador
                     for nome, menu in self.telas.items():
                         if menu.aqui:
                             if pygame.display.get_surface() is not None:

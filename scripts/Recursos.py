@@ -4,7 +4,7 @@ import pygame
 class Tela:
     def __init__(self):
         self.rodando = True
-        self.janela = pygame.display.set_mode((1280, 720))
+        self.janela = pygame.display.set_mode((1280, 720), pygame.FULLSCREEN)
 
 
 class Botoes:
@@ -36,7 +36,7 @@ class Botoes:
                 if e.key == pygame.K_DOWN and self.selec < len(self.botoes) - 1:
                     self.selec += 1
                 if e.key == pygame.K_RETURN:
-                     self.acoes[self.selec]()
+                    self.acoes[self.selec]()
 
         for c, botao in enumerate(self.botoes):
             if c == self.selec and not botao[1]:
@@ -53,3 +53,10 @@ class Fontes:
     def __init__(self):
         self.fonte_normal = pygame.font.Font("../src/fontes/Subspace.otf", 40)
         self.fonte_selec = pygame.font.Font("../src/fontes/Subspace Bold.otf", 50)
+
+
+class Imagens:
+    def __init__(self):
+        self.imagens = {"back1": pygame.image.load("../src/imagens/background1.jpg").convert(),
+                        "back2": pygame.image.load("../src/imagens/background2.jpg").convert(),
+                        "back3": pygame.image.load("../src/imagens/background3.jpg").convert()}
