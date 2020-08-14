@@ -45,7 +45,10 @@ class Main:
                 #Código
                 for nome, menu in self.telas.items():
                     if menu.aqui:
-                        menu.tick()
+                        if menu.nome == "jogo":
+                            menu.tick(self.delta)
+                        else:
+                            menu.tick()
 
     def render(self):
         while self.tela.rodando:

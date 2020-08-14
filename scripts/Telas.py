@@ -97,7 +97,7 @@ class MenuExtras(TelaExemplo):
         super().__init__("extras", self.infos, main, back)
 
     def NarutoSad(self):
-        self.main.telas["jogo"].mudar_musica("Musica1")
+        self.main.telas["jogo"].carregar_musica("Musica1")
         self.mudar_tela(self.nome, "jogo")
 
     def voltar(self):
@@ -115,12 +115,11 @@ class MenuOnline(TelaExemplo):
 
 
 class TelaJogar:
-    def __init__(self, main, back, nome_musica=None):
+    def __init__(self, main, back):
         self.aqui = False
         self.main = main
         self.nome = "jogo"
         self.back = back
-        self.nome_musica = nome_musica
         self.imagens = Recursos.Imagens()
         self.botoes = [[(549, 640), (0, 255, 0), False],
                        [(610, 640), (255, 0, 0), False],
@@ -128,10 +127,28 @@ class TelaJogar:
                        [(732, 640), (0, 0, 255), False]]
         self.esteira = None
 
-    def tick(self):
+        self.notas_provisorias = list()
+        self.notas_na_esteira = list()
+        self.notas_carregadas = False
+        self.agora = self.antes = pygame.time.get_ticks()
+        self.tempo = 0
+
+    def tick(self, delta):
         keys = pygame.key.get_pressed()
         for c, botao in enumerate(self.botoes):
             self.botoes[c][2] = keys[self.main.comandos[c]]
+
+        if self.notas_carregadas:
+            self.agora = pygame.time.get_ticks()
+            self.tempo = self.agora - self.antes
+            for nota in self.notas_provisorias:
+                if nota.tempo <= self.tempo / 1000:
+                    self.notas_na_esteira.append(nota)
+                    self.notas_provisorias.remove(nota)
+            for nota in self.notas_na_esteira:
+                nota.tick(delta)
+                if nota.pos[1] >= 735:
+                    self.notas_na_esteira.remove(nota)
 
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
@@ -144,9 +161,18 @@ class TelaJogar:
         pygame.draw.rect(self.main.tela.janela, (255, 255, 255), ((519, 0), (244, 720))) #Esteira
         for botao in self.botoes:
             pygame.draw.circle(self.main.tela.janela, botao[1], botao[0], 30, int(not botao[2]))
+        for nota in self.notas_na_esteira:
+            nota.render(self.main.tela)
 
-    def mudar_musica(self, nome):
-        self.nome_musica = nome
+    def carregar_musica(self, nome):
+        arquivo = open("../src/musicas/" + nome + ".txt", "r")
+        for linha in arquivo:
+            for c, caractere in enumerate(linha):
+                if c <= 8 and caractere.isdigit() and caractere != "0":
+                    self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:-1])))
+        self.antes = self.agora = pygame.time.get_ticks()
+        self.tempo = 0
+        self.notas_carregadas = True
 
     def mudar_tela(self, sai_de, vai_para):
         self.__init__(self.main, self.back)

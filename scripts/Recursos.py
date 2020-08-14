@@ -4,7 +4,7 @@ import pygame
 class Tela:
     def __init__(self):
         self.rodando = True
-        self.janela = pygame.display.set_mode((1280, 720), pygame.FULLSCREEN)
+        self.janela = pygame.display.set_mode((1280, 720))
 
 
 class Botoes:
@@ -60,3 +60,19 @@ class Imagens:
         self.imagens = {"back1": pygame.image.load("../src/imagens/background1.jpg").convert(),
                         "back2": pygame.image.load("../src/imagens/background2.jpg").convert(),
                         "back3": pygame.image.load("../src/imagens/background3.jpg").convert()}
+
+
+class Notas:
+    def __init__(self, corda, tempo):
+        self.corda = corda
+        self.cores = [(0, 255, 0), (255, 0, 0), (255, 255, 0), (0, 0, 255)]
+        self.posy = -15
+        self.pos = [489 + (60 * self.corda) + self.corda, self.posy]
+        self.tempo = tempo
+
+    def tick(self, delta):
+        self.posy += 240 * delta
+        self.pos[1] = int(self.posy)
+
+    def render(self, tela):
+        pygame.draw.circle(tela.janela, self.cores[self.corda-1], self.pos, 30)
