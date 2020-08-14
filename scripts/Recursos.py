@@ -63,15 +63,16 @@ class Imagens:
 
 
 class Notas:
-    def __init__(self, corda, tempo):
+    def __init__(self, corda, tempo, velocidade):
         self.corda = corda
         self.cores = [(0, 255, 0), (255, 0, 0), (255, 255, 0), (0, 0, 255)]
         self.posy = -15
-        self.pos = [489 + (60 * self.corda) + self.corda, self.posy]
+        self.pos = [489 + (60 * self.corda) + self.corda - 1, self.posy]
         self.tempo = tempo
+        self.velocidade = velocidade
 
     def tick(self, delta):
-        self.posy += 240 * delta
+        self.posy += self.velocidade * delta
         self.pos[1] = int(self.posy)
 
     def render(self, tela):

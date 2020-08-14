@@ -97,7 +97,7 @@ class MenuExtras(TelaExemplo):
         super().__init__("extras", self.infos, main, back)
 
     def NarutoSad(self):
-        self.main.telas["jogo"].carregar_musica("Musica1")
+        self.main.telas["jogo"].carregar_musica("Musica1", 240)
         self.mudar_tela(self.nome, "jogo")
 
     def voltar(self):
@@ -125,8 +125,8 @@ class TelaJogar:
                        [(610, 640), (255, 0, 0), False],
                        [(671, 640), (255, 255, 0), False],
                        [(732, 640), (0, 0, 255), False]]
-        self.esteira = None
 
+        # Adicionar Notas
         self.notas_provisorias = list()
         self.notas_na_esteira = list()
         self.notas_carregadas = False
@@ -147,6 +147,9 @@ class TelaJogar:
                     self.notas_provisorias.remove(nota)
             for nota in self.notas_na_esteira:
                 nota.tick(delta)
+                for botao in self.botoes:
+                    if botao[2] and (botao[0][1] - 20) <= nota.pos[1] <= (botao[0][1] + 20) and botao[0][0] == nota.pos[0]:
+                        self.notas_na_esteira.remove(nota)
                 if nota.pos[1] >= 735:
                     self.notas_na_esteira.remove(nota)
 
@@ -164,12 +167,12 @@ class TelaJogar:
         for nota in self.notas_na_esteira:
             nota.render(self.main.tela)
 
-    def carregar_musica(self, nome):
+    def carregar_musica(self, nome, velocidade):
         arquivo = open("../src/musicas/" + nome + ".txt", "r")
         for linha in arquivo:
             for c, caractere in enumerate(linha):
                 if c <= 8 and caractere.isdigit() and caractere != "0":
-                    self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:-1])))
+                    self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:-1]), velocidade))
         self.antes = self.agora = pygame.time.get_ticks()
         self.tempo = 0
         self.notas_carregadas = True
