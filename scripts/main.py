@@ -24,7 +24,8 @@ class Main:
                       "modo_historia": Telas.MenuModoHistoria(self, "back2"),
                       "extras": Telas.MenuExtras(self, "back2"),
                       "online": Telas.MenuOnline(self, "back2"),
-                      "jogo": Telas.TelaJogar(self, "back2")}
+                      "jogo": Telas.TelaJogar(self, "back2"),
+                      "estatisticas": Telas.TelaEstatisticas(self, "back2")}
 
     def rodar(self):
         r = Thread(target=self.render)

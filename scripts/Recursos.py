@@ -52,6 +52,7 @@ class Botoes:
 class Fontes:
     def __init__(self):
         self.fonte_normal = pygame.font.Font("../src/fontes/Subspace.otf", 40)
+        self.fonte_texto = pygame.font.Font("../src/fontes/Subspace.otf", 30)
         self.fonte_selec = pygame.font.Font("../src/fontes/Subspace Bold.otf", 50)
 
 
