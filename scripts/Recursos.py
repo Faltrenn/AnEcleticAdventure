@@ -78,3 +78,9 @@ class Notas:
 
     def render(self, tela):
         pygame.draw.circle(tela.janela, self.cores[self.corda-1], self.pos, 30)
+
+
+class Sons:
+    def __init__(self):
+        self.erro = pygame.mixer.Sound("../src/sons/som_erro.ogg")
+        self.erro.set_volume(0.2)

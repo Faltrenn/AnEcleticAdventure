@@ -184,6 +184,9 @@ class TelaJogar:
         self.textos = [[self.fontes.fonte_texto.render("Score: " + str(self.score), True, (0, 0, 0)), (900, 550)],
                        [self.fontes.fonte_texto.render("Multiplicador" + str(self.mult_score), True, (0, 0, 0)), (1000, 550)]]
 
+        # Efeitos sonoros
+        self.sons = Recursos.Sons()
+
     def tick(self, delta):
         keys = pygame.key.get_pressed()
         for c, botao in enumerate(self.botoes):
@@ -213,6 +216,12 @@ class TelaJogar:
                         self.score += 1 * self.mult_score
                         if self.satisfacao < 12:
                             self.satisfacao += 1
+                    elif botao[2]:
+                        self.sons.erro.play()
+                        self.sequencia = 0
+                        self.satisfacao -= 1
+                        self.mult_score = 1
+
                 # Nota saindo da tela
                 if nota.pos[1] >= 735:
                     self.notas_na_esteira.remove(nota)
@@ -220,8 +229,16 @@ class TelaJogar:
                     self.sequencia = 0
                     if self.satisfacao > 1:
                         self.satisfacao -= 1
-                    else:
-                        self.mudar_tela(self.nome, "estatisticas")
+                    # else:
+                    #     self.mudar_tela(self.nome, "estatisticas")
+
+            for botao in self.botoes:
+                if botao[2] and len(self.notas_na_esteira) == 0:
+                    self.sons.erro.play()
+                    self.sequencia = 0
+                    self.satisfacao -= 1
+                    self.mult_score = 1
+
             if self.satisfacao <= 4:
                 self.cor_atual = self.cores_satisfacao[0]
             elif self.satisfacao <= 8:
@@ -250,12 +267,16 @@ class TelaJogar:
 
     def carregar_musica(self, nome, velocidade):
         self.nome_musica = nome
-        self.musica = pygame.mixer.Sound("../src/musicas/" + nome + ".ogg")
-        arquivo = open("../src/musicas/" + nome + ".txt", "r")
-        for linha in arquivo:
-            for c, caractere in enumerate(linha):
-                if c <= 8 and caractere.isdigit() and caractere != "0":
-                    self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:-1]), velocidade))
+        try:
+            self.musica = pygame.mixer.Sound("../src/musicas/" + nome + ".ogg")
+            arquivo = open("../src/musicas/" + nome + ".txt", "r")
+            for linha in arquivo:
+                for c, caractere in enumerate(linha):
+                    if c <= 8 and caractere.isdigit() and caractere != "0":
+                        self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:-1]), velocidade))
+        except FileNotFoundError:
+            self.main.deu_erro()
+
         self.quant_notas = len(self.notas_provisorias)
         self.antes = self.agora = pygame.time.get_ticks()
         self.tempo = 0

@@ -7,6 +7,8 @@ finally:
     import pygame
     from threading import Thread
     import time
+    import tkinter
+    from tkinter import messagebox
 
 
 pygame.init()
@@ -16,22 +18,37 @@ class Main:
     def __init__(self):
         self.tela = Recursos.Tela()
 
-        self.comandos = [pygame.K_a, pygame.K_s, pygame.K_j, pygame.K_k]
+        self.erro = False
 
-        self.telas = {"principal": Telas.MenuPrincipal(self, "back1"),
-                      "jogar": Telas.MenuJogar(self, "back2"),
-                      "opcoes": Telas.MenuOpcoes(self, "back1"),
-                      "modo_historia": Telas.MenuModoHistoria(self, "back2"),
-                      "extras": Telas.MenuExtras(self, "back2"),
-                      "online": Telas.MenuOnline(self, "back2"),
-                      "jogo": Telas.TelaJogar(self, "back2"),
-                      "estatisticas": Telas.TelaEstatisticas(self, "back2")}
+        self.r = None
+
+        self.comandos = [pygame.K_a, pygame.K_s, pygame.K_j, pygame.K_k]
+        try:
+            self.telas = {"principal": Telas.MenuPrincipal(self, "back1"),
+                          "jogar": Telas.MenuJogar(self, "back2"),
+                          "opcoes": Telas.MenuOpcoes(self, "back1"),
+                          "modo_historia": Telas.MenuModoHistoria(self, "back2"),
+                          "extras": Telas.MenuExtras(self, "back2"),
+                          "online": Telas.MenuOnline(self, "back2"),
+                          "jogo": Telas.TelaJogar(self, "back2"),
+                          "estatisticas": Telas.TelaEstatisticas(self, "back2")}
+        except FileNotFoundError:
+            self.deu_erro()
+
+    def deu_erro(self):
+        self.tela.rodando = False
+        self.erro = True
+        tk = tkinter.Tk()
+        tk.withdraw()
+        messagebox.showerror("Seu safadinho/a", "Apagou alguma coisa aí seu vacilão!")
 
     def rodar(self):
-        r = Thread(target=self.render)
-        r.start()
+        self.r = Thread(target=self.render)
+        self.r.start()
         antes = time.time_ns()
         while self.tela.rodando:
+            if self.erro:
+                return
             agora = time.time_ns()
             delta = (agora - antes)/1000000000
             antes = agora
@@ -45,6 +62,8 @@ class Main:
 
     def render(self):
         while self.tela.rodando:
+            if self.erro:
+                return
             while self.tela.rodando:
                 # Código limitador
                 for nome, menu in self.telas.items():
