@@ -1,4 +1,5 @@
 import pygame
+import arcade
 
 
 class Tela:
@@ -80,7 +81,40 @@ class Notas:
         pygame.draw.circle(tela.janela, self.cores[self.corda-1], self.pos, 30)
 
 
+class Gatilho:
+    def __init__(self, corda, comando):
+        self.comando = comando
+        self.corda = corda + 1
+        self.cores = [(0, 255, 0), (255, 0, 0), (255, 255, 0), (0, 0, 255)]
+        self.pos = [489 + (60 * self.corda) + self.corda - 1, 650]
+        self.efetivo = True
+        self.ativado = False
+        self.inicio_ativ = 0
+        self.notas = None
+
+    def ativar(self, pressionado, notas):
+        self.ativado = pressionado
+        self.notas = notas
+
+        if not pressionado:
+            self.efetivo = True
+        else:
+            self.inicio_ativ = pygame.time.get_ticks()
+
+    def tick(self):
+        if self.ativado:
+            if (pygame.time.get_ticks() - self.inicio_ativ)/1000 > 0.1:
+                self.efetivo = False
+            if self.efetivo:
+                for nota in self.notas:
+                    if 720 >= nota.posy >= 650 and nota.corda == self.corda:
+                        self.notas.remove(nota)
+                        self.efetivo = False
+
+    def render(self, tela):
+        pygame.draw.circle(tela.janela, self.cores[self.corda - 1], self.pos, 30, int(not self.ativado))
+
+
 class Sons:
     def __init__(self):
-        self.erro = pygame.mixer.Sound("../src/sons/som_erro.ogg")
-        self.erro.set_volume(0.2)
+        self.erro = arcade.Sound("../src/sons/som_erro.ogg")

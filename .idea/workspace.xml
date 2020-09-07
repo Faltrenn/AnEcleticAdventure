@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9098fa-3286-47d5-b974-26744b3b13be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/Teste.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sons/som_erro.ogg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Recursos.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Recursos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Telas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Teste.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,27 +55,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AnEcleticAdventure" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AnEcleticAdventure" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,6 +68,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/v3/scripts/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Telas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AnEcleticAdventure" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/Telas.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.Telas" />
         <item itemvalue="Python.Teste" />
         <item itemvalue="Python.teste" />
         <item itemvalue="Python.Main (3)" />
-        <item itemvalue="Python.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -197,25 +195,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="52" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597085844700" />
-    <state width="1345" height="158" key="GridCell.Tab.0.bottom" timestamp="1598381898086">
+    <state width="1345" height="94" key="GridCell.Tab.0.bottom" timestamp="1599503057577">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="158" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598381898086" />
+    <state width="1345" height="94" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599503057577" />
     <state width="1419" height="276" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
-    <state width="1345" height="158" key="GridCell.Tab.0.center" timestamp="1598381898086">
+    <state width="1345" height="94" key="GridCell.Tab.0.center" timestamp="1599503057577">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="158" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598381898086" />
+    <state width="1345" height="94" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599503057577" />
     <state width="1419" height="276" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
-    <state width="1345" height="158" key="GridCell.Tab.0.left" timestamp="1598381898086">
+    <state width="1345" height="94" key="GridCell.Tab.0.left" timestamp="1599503057576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="158" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598381898086" />
+    <state width="1345" height="94" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599503057576" />
     <state width="1419" height="276" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
-    <state width="1345" height="158" key="GridCell.Tab.0.right" timestamp="1598381898086">
+    <state width="1345" height="94" key="GridCell.Tab.0.right" timestamp="1599503057577">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="158" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598381898086" />
+    <state width="1345" height="94" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599503057577" />
     <state width="1419" height="276" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1594842485203" />
     <state width="1419" height="276" key="GridCell.Tab.1.bottom" timestamp="1594842485203">
       <screen x="0" y="0" width="1440" height="860" />
@@ -246,9 +244,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="416" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1594839766835" />
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1594841964285">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="363" y="152" width="672" height="574" key="search.everywhere.popup" timestamp="1599499269893">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="363" y="152" width="672" height="574" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599499269893" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1594841964285" />
   </component>
   <component name="XDebuggerManager">

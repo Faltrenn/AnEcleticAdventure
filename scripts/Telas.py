@@ -156,99 +156,63 @@ class TelaJogar:
         self.nome = "jogo"
         self.back = back
         self.imagens = Recursos.Imagens()
-        self.botoes = [[(549, 640), (0, 255, 0), False],
-                       [(610, 640), (255, 0, 0), False],
-                       [(671, 640), (255, 255, 0), False],
-                       [(732, 640), (0, 0, 255), False]]
 
-        self.nome_musica = ""
-        self.musica = None
-        self.tocando = False
-        self.quant_notas = 0
-        # Adicionar Notas
+        # Notas
         self.notas_provisorias = list()
-        self.notas_na_esteira = list()
+        self.notas_esteira = list()
         self.notas_carregadas = False
-        self.agora = self.antes = pygame.time.get_ticks()
-        self.tempo = 0
+        self.agora = 0
 
-        # Estatísticas
-        self.sequencia = self.acertos = self.score = 0
-        self.mult_score = 1
+        # Musica
+        self.musica = None
 
-        self.satisfacao = 6
-        self.cores_satisfacao = ((255, 0, 0), (255, 255, 0), (0, 255, 0))
-        self.cor_atual = 0
-
-        self.fontes = Recursos.Fontes()
-        self.textos = [[self.fontes.fonte_texto.render("Score: " + str(self.score), True, (0, 0, 0)), (900, 550)],
-                       [self.fontes.fonte_texto.render("Multiplicador" + str(self.mult_score), True, (0, 0, 0)), (1000, 550)]]
-
-        # Efeitos sonoros
-        self.sons = Recursos.Sons()
+        # Gatilhos
+        self.gatilho1 = Recursos.Gatilho(0, self.main.comandos[0])
+        self.gatilho2 = Recursos.Gatilho(1, self.main.comandos[1])
+        self.gatilho3 = Recursos.Gatilho(2, self.main.comandos[2])
+        self.gatilho4 = Recursos.Gatilho(3, self.main.comandos[3])
 
     def tick(self, delta):
-        keys = pygame.key.get_pressed()
-        for c, botao in enumerate(self.botoes):
-            self.botoes[c][2] = keys[self.main.comandos[c]]
-
         if self.notas_carregadas:
-            self.agora = pygame.time.get_ticks()
-            self.tempo = self.agora - self.antes
-            if not self.tocando:
-                self.musica.set_volume(0.15)
-                self.musica.play()
-                self.tocando = True
-            # Adicionando notas na tela
+            # Tempo desde que carregou a musica
+            tempo = (pygame.time.get_ticks() - self.agora)/1000
+
+            # Colocando notas na tela no tempo delas
             for nota in self.notas_provisorias:
-                if nota.tempo <= self.tempo / 1000:
-                    self.notas_na_esteira.append(nota)
+                if nota.tempo <= tempo:
+                    self.notas_esteira.append(nota)
                     self.notas_provisorias.remove(nota)
-            self.mult_score = int(self.sequencia / 20) + 1
-            for nota in self.notas_na_esteira:
+
+            # Fazendo as notas descerem
+            for nota in self.notas_esteira:
                 nota.tick(delta)
-                for botao in self.botoes:
-                    # Verificando colisões
-                    if botao[2] and (botao[0][1] - 20) <= nota.pos[1] <= (botao[0][1] + 20) and botao[0][0] == nota.pos[0]:
-                        self.notas_na_esteira.remove(nota)
-                        self.acertos += 1
-                        self.sequencia += 1
-                        self.score += 1 * self.mult_score
-                        if self.satisfacao < 12:
-                            self.satisfacao += 1
-                    elif botao[2]:
-                        self.sons.erro.play()
-                        self.sequencia = 0
-                        self.satisfacao -= 1
-                        self.mult_score = 1
 
-                # Nota saindo da tela
-                if nota.pos[1] >= 735:
-                    self.notas_na_esteira.remove(nota)
-                    self.mult_score = 1
-                    self.sequencia = 0
-                    if self.satisfacao > 1:
-                        self.satisfacao -= 1
-                    # else:
-                    #     self.mudar_tela(self.nome, "estatisticas")
+        self.gatilho1.tick()
+        self.gatilho2.tick()
+        self.gatilho3.tick()
+        self.gatilho4.tick()
 
-            for botao in self.botoes:
-                if botao[2] and len(self.notas_na_esteira) == 0:
-                    self.sons.erro.play()
-                    self.sequencia = 0
-                    self.satisfacao -= 1
-                    self.mult_score = 1
-
-            if self.satisfacao <= 4:
-                self.cor_atual = self.cores_satisfacao[0]
-            elif self.satisfacao <= 8:
-                self.cor_atual = self.cores_satisfacao[1]
-            else:
-                self.cor_atual = self.cores_satisfacao[2]
-            self.textos = [[self.fontes.fonte_texto.render("Score: " + str(self.score), True, (0, 0, 0)), (850, 400)],
-                           [self.fontes.fonte_texto.render("Multiplicador: " + str(self.mult_score), True, (0, 0, 0)), (1000, 400)]]
-
+        # Verificando se os gatilhos estão pressionados
         for e in pygame.event.get():
+            if e.type == pygame.KEYDOWN:
+                if e.key == self.gatilho1.comando:
+                    self.gatilho1.ativar(True, self.notas_esteira)
+                if e.key == self.gatilho2.comando:
+                    self.gatilho2.ativar(True, self.notas_esteira)
+                if e.key == self.gatilho3.comando:
+                    self.gatilho3.ativar(True, self.notas_esteira)
+                if e.key == self.gatilho4.comando:
+                    self.gatilho4.ativar(True, self.notas_esteira)
+            if e.type == pygame.KEYUP:
+                if e.key == self.gatilho1.comando:
+                    self.gatilho1.ativar(False, self.notas_esteira)
+                if e.key == self.gatilho2.comando:
+                    self.gatilho2.ativar(False, self.notas_esteira)
+                if e.key == self.gatilho3.comando:
+                    self.gatilho3.ativar(False, self.notas_esteira)
+                if e.key == self.gatilho4.comando:
+                    self.gatilho4.ativar(False, self.notas_esteira)
+
             if e.type == pygame.QUIT:
                 self.main.tela.rodando = False
                 pygame.quit()
@@ -256,35 +220,29 @@ class TelaJogar:
     def render(self):
         self.main.tela.janela.blit(self.imagens.imagens[self.back],
                                    self.imagens.imagens[self.back].get_rect())
-        pygame.draw.rect(self.main.tela.janela, (255, 255, 255), ((519, 0), (244, 720))) #Esteira
-        for botao in self.botoes:
-            pygame.draw.circle(self.main.tela.janela, botao[1], botao[0], 30, int(not botao[2]))
-        for nota in self.notas_na_esteira:
+        pygame.draw.rect(self.main.tela.janela, (255, 255, 255), ((519, 0), (244, 720)))
+
+        for nota in self.notas_esteira:
             nota.render(self.main.tela)
-        pygame.draw.rect(self.main.tela.janela, self.cor_atual, ((1100, 570), (100, 100)))
-        for texto in self.textos:
-            self.main.tela.janela.blit(texto[0], texto[1])
 
-    def carregar_musica(self, nome, velocidade):
-        self.nome_musica = nome
-        try:
-            self.musica = pygame.mixer.Sound("../src/musicas/" + nome + ".ogg")
-            arquivo = open("../src/musicas/" + nome + ".txt", "r")
-            for linha in arquivo:
-                for c, caractere in enumerate(linha):
-                    if c <= 8 and caractere.isdigit() and caractere != "0":
-                        self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:-1]), velocidade))
-        except FileNotFoundError:
-            self.main.deu_erro()
-
-        self.quant_notas = len(self.notas_provisorias)
-        self.antes = self.agora = pygame.time.get_ticks()
-        self.tempo = 0
-        self.notas_carregadas = True
+        self.gatilho1.render(self.main.tela)
+        self.gatilho2.render(self.main.tela)
+        self.gatilho3.render(self.main.tela)
+        self.gatilho4.render(self.main.tela)
 
     def mudar_tela(self, sai_de, vai_para):
-        self.main.telas["estatisticas"].carregar_estatisticas(self)
-        self.musica.stop()
+        self.main.telas[sai_de].__init__(self.main, self.back)
         self.main.telas[sai_de].aqui = False
         self.main.telas[vai_para].aqui = True
+        self.main.telas[vai_para].tela_anterior = sai_de
+
+    def carregar_musica(self, nome_musica, velocidade):
+        arquivo = open("../src/musicas/"+nome_musica+".txt", "r")
+        for linha in arquivo:
+            for c, caractere in enumerate(linha):
+                if c <= 8 and caractere.isdigit() and caractere != "0":
+                    self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:]), velocidade))
+        self.musica = pygame.mixer.music.load("../src/musicas/"+nome_musica+".ogg")
+        self.agora = pygame.time.get_ticks()
+        self.notas_carregadas = True
 
