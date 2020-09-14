@@ -218,9 +218,13 @@ class TelaJogar:
                 pygame.quit()
 
     def render(self):
+
+
         self.main.tela.janela.blit(self.imagens.imagens[self.back],
                                    self.imagens.imagens[self.back].get_rect())
-        pygame.draw.rect(self.main.tela.janela, (255, 255, 255), ((519, 0), (244, 720)))
+
+
+        self.main.tela.janela.blit(self.imagens.imagens["esteira1"], (518, 0, 244, 720))
 
         for nota in self.notas_esteira:
             nota.render(self.main.tela)
