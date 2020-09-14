@@ -165,12 +165,18 @@ class TelaJogar:
 
         # Musica
         self.musica = None
+        self.tocando_musica = False
 
         # Gatilhos
         self.gatilho1 = Recursos.Gatilho(0, self.main.comandos[0])
         self.gatilho2 = Recursos.Gatilho(1, self.main.comandos[1])
         self.gatilho3 = Recursos.Gatilho(2, self.main.comandos[2])
         self.gatilho4 = Recursos.Gatilho(3, self.main.comandos[3])
+
+        self.fade = 255
+        self.fade_inc = -1
+        self.imagem1_posy = 0
+        self.imagem2_posy = -720
 
     def tick(self, delta):
         if self.notas_carregadas:
@@ -187,14 +193,25 @@ class TelaJogar:
             for nota in self.notas_esteira:
                 nota.tick(delta)
 
+
             # Teste
+            self.fade += delta * 50 * self.fade_inc
+            if self.fade <= 0:
+                self.fade_inc = 1
+            elif self.fade >= 255:
+                self.fade_inc = -1
+            self.imagens.imagens["esteira2fade1"].set_alpha(int(self.fade))
 
-            if tempo > 25:
-                self.imagens.imagens["esteira2fade1"].set_alpha(0)
-
-            print(tempo)
-
-
+            if self.imagem1_posy < self.imagem2_posy:
+                self.imagem1_posy += delta * 120
+                self.imagem2_posy = self.imagem1_posy + 720
+            else:
+                self.imagem2_posy += delta * 120
+                self.imagem1_posy = self.imagem2_posy + 720
+            if self.imagem1_posy >= 720:
+                self.imagem1_posy = -720
+            if self.imagem2_posy >= 720:
+                self.imagem2_posy = -720
 
         self.gatilho1.tick()
         self.gatilho2.tick()
@@ -226,19 +243,21 @@ class TelaJogar:
                 self.main.tela.rodando = False
                 pygame.quit()
 
-
     def render(self):
 
+        if self.notas_carregadas and not self.tocando_musica:
+            self.musica.set_volume(0.1)
+            self.musica.play()
+            self.tocando_musica = True
 
         self.main.tela.janela.blit(self.imagens.imagens[self.back],
                                    self.imagens.imagens[self.back].get_rect())
 
-        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade2"], (518, 0, 244, 720))
+        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade2"], (518, self.imagem1_posy, 244, 720))
+        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade1"], (518, self.imagem1_posy, 244, 720))
 
-        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade1"], (518, 0, 244, 720))
-
-
-
+        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade2"], (518, self.imagem2_posy, 244, 720))
+        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade1"], (518, self.imagem2_posy, 244, 720))
 
         for nota in self.notas_esteira:
             nota.render(self.main.tela)
@@ -260,7 +279,7 @@ class TelaJogar:
             for c, caractere in enumerate(linha):
                 if c <= 8 and caractere.isdigit() and caractere != "0":
                     self.notas_provisorias.append(Recursos.Notas(int(caractere), float(linha[9:]), velocidade))
-        self.musica = pygame.mixer.music.load("../src/musicas/"+nome_musica+".ogg")
+        self.musica = pygame.mixer.Sound("../src/musicas/"+nome_musica+".ogg")
         self.agora = pygame.time.get_ticks()
         self.notas_carregadas = True
 

@@ -9,7 +9,7 @@ class Tela:
 
 
 class Botoes:
-    def __init__(self, infos):# [[nome, cor, posicao, acao]]
+    def __init__(self, infos):
         self.textos = list()
         self.cores = list()
         self.posicoes = list()
@@ -93,6 +93,7 @@ class Gatilho:
         self.ativado = False
         self.inicio_ativ = 0
         self.notas = None
+        self.sons = Sons()
 
     def ativar(self, pressionado, notas):
         self.ativado = pressionado
@@ -109,8 +110,12 @@ class Gatilho:
                 self.efetivo = False
             if self.efetivo:
                 for nota in self.notas:
-                    if 720 >= nota.posy >= 650 and nota.corda == self.corda:
+                    if 720 >= nota.posy >= 670 and nota.corda == self.corda:
                         self.notas.remove(nota)
+                        self.efetivo = False
+                    else:
+                        self.sons.erro.stop()
+                        self.sons.erro.play(volume=0.1)
                         self.efetivo = False
 
     def render(self, tela):
