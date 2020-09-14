@@ -62,7 +62,8 @@ class Imagens:
         self.imagens = {"back1": pygame.image.load("../src/imagens/background1.jpg").convert(),
                         "back2": pygame.image.load("../src/imagens/background2.jpg").convert(),
                         "back3": pygame.image.load("../src/imagens/background3.jpg").convert(),
-                        "esteira1": pygame.image.load("../src/imagens/esteira1.jpg").convert()}
+                        "esteira2fade1": pygame.image.load("../src/imagens/esteira2fade1.jpg").convert(),
+                        "esteira2fade2": pygame.image.load("../src/imagens/esteira2fade2.jpg").convert()}
 
 
 class Notas:

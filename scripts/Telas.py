@@ -187,6 +187,15 @@ class TelaJogar:
             for nota in self.notas_esteira:
                 nota.tick(delta)
 
+            # Teste
+
+            if tempo > 25:
+                self.imagens.imagens["esteira2fade1"].set_alpha(0)
+
+            print(tempo)
+
+
+
         self.gatilho1.tick()
         self.gatilho2.tick()
         self.gatilho3.tick()
@@ -217,14 +226,19 @@ class TelaJogar:
                 self.main.tela.rodando = False
                 pygame.quit()
 
+
     def render(self):
 
 
         self.main.tela.janela.blit(self.imagens.imagens[self.back],
                                    self.imagens.imagens[self.back].get_rect())
 
+        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade2"], (518, 0, 244, 720))
 
-        self.main.tela.janela.blit(self.imagens.imagens["esteira1"], (518, 0, 244, 720))
+        self.main.tela.janela.blit(self.imagens.imagens["esteira2fade1"], (518, 0, 244, 720))
+
+
+
 
         for nota in self.notas_esteira:
             nota.render(self.main.tela)
